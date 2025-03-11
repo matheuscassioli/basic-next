@@ -1,18 +1,18 @@
 
-import "./globals.css";
+import "./globals.css"; 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body style={{
-        display: 'flex' ,
+        display: 'flex',
         alignItems: 'center',
         flexDirection: 'column',
         minHeight: ' 100vh',
         justifyContent: 'center',
         fontSize: '24px',
-      }}>
-        {children}
+      }}> 
+          {children} 
       </body>
     </html>
   );
