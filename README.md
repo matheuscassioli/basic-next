@@ -11,11 +11,5 @@ O principal foco é entender como o Next.js pode ser integrado a aplicações Re
 - **Rotas Automáticas**: O Next.js oferece uma maneira intuitiva de gerenciar as rotas com base na estrutura de pastas.
 - **API Routes**: Permite criar facilmente funções de API dentro do projeto Next.js.
 
-## Primeiros Passos
-
-1. **Instalação do Next.js com React**
-
-   Para começar a usar o Next.js em seu projeto, você pode criar um novo projeto utilizando o comando abaixo:
-
-   ```bash
-   npx create-next-app@latest nome-do-projeto
+ 
+ 
