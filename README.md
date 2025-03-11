@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js com React + Primeiros Passos
 
-## Getting Started
+Este projeto tem como objetivo aprender a usar o Next.js junto com React, explorando seus principais recursos, especialmente o **Server-Side Rendering (SSR)**, para melhorar o desempenho das aplicações React.
 
-First, run the development server:
+## Objetivo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O principal foco é entender como o Next.js pode ser integrado a aplicações React, aproveitando seus recursos avançados, como:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Server-Side Rendering (SSR)**: Renderizar as páginas no servidor para melhorar o tempo de carregamento e a indexação em mecanismos de busca.
+- **Geração Estática (SSG)**: Criar páginas estáticas durante o build para otimizar o desempenho e a entrega de conteúdo.
+- **Rotas Automáticas**: O Next.js oferece uma maneira intuitiva de gerenciar as rotas com base na estrutura de pastas.
+- **API Routes**: Permite criar facilmente funções de API dentro do projeto Next.js.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Primeiros Passos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Instalação do Next.js com React**
 
-## Learn More
+   Para começar a usar o Next.js em seu projeto, você pode criar um novo projeto utilizando o comando abaixo:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npx create-next-app@latest nome-do-projeto
