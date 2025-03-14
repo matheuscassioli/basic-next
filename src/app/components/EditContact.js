@@ -1,29 +1,41 @@
 'use client'
 
-import React from 'react'
-import { BiSolidEdit } from "react-icons/bi";
+import React, { useContext } from 'react'
 import styled from 'styled-components';
 import { ROUTE_EDIT_CONTACT } from '../routes/routesapi';
+import ContactsContext from '../contexts/ContactsContext';
+import { FiTrash } from "react-icons/fi";
 
-const EditButtonStyle = styled.button`
-    cursor: pointer;
-` 
+
+const DeleteButtonStyle = styled.button`
+    cursor: pointer; 
+
+    :hover{
+        transition:.3s;
+        color: red;
+    }
+`
 const EditContact = ({ id }) => {
 
-    const updateContact = async (id, data) => {
+    const { contactsFormatted, setContacts } = useContext(ContactsContext)
+
+    const deleteContact = async (id, data) => {
         const res = await fetch(ROUTE_EDIT_CONTACT(id), {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         });
         const result = await res.json();
-        console.log(result)
+        if (result) {
+            const newArr = contactsFormatted.filter(obj => obj.id !== id)
+            setContacts(newArr)
+        }
     }
 
     return (
-        <EditButtonStyle onClick={(e) => updateContact(id)}>
-            <BiSolidEdit />
-        </EditButtonStyle>
+        <DeleteButtonStyle onClick={(e) => deleteContact(id)}>
+            <FiTrash />
+        </DeleteButtonStyle>
     )
 }
 

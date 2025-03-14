@@ -1,6 +1,8 @@
 'use client'
+import { useContext } from 'react';
 import EditContact from '../../components/EditContact'
 import styled from 'styled-components'
+import ContactsContext from '../../contexts/ContactsContext'
 
 const TableContainer = styled.div`
     font-size: 16px;
@@ -26,7 +28,9 @@ const TableStyled = styled.table`
     }
 `;
 
-const TableContacts = ({ contactsFormatted }) => {
+const TableContacts = () => {
+
+    const { contactsFormatted } = useContext(ContactsContext)
 
     if (!contactsFormatted || contactsFormatted.length === 0) {
         return <p>Não há contatos :(</p>;

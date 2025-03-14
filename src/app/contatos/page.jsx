@@ -1,13 +1,12 @@
-import TableContacts from './TableContacts/TableContacts'
+import ClientContactsWrapper from '../components/ClientContactsWrapper'
 
 const fetchContacts = async () => {
     const res = await fetch('https://dummyjson.com/users');
-    const data = await res.json()
+    const data = await res.json();
     return data.users;
-}
+};
 
-const page = async () => {
-
+const Page = async () => {
     const contacts = await fetchContacts();
     const contactsFormatted = contacts.map(({ id, firstName, email }) => ({
         id,
@@ -15,9 +14,7 @@ const page = async () => {
         email
     }));
 
-    return (
-        <TableContacts contactsFormatted={contactsFormatted} />
-    )
-}
+    return <ClientContactsWrapper contacts={contactsFormatted} />;
+};
 
-export default page
+export default Page;
