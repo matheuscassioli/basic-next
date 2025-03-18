@@ -1,5 +1,6 @@
 
-import "./globals.css"; 
+
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,8 +12,8 @@ export default function RootLayout({ children }) {
         minHeight: ' 100vh',
         justifyContent: 'center',
         fontSize: '24px',
-      }}> 
-          {children} 
+      }}>
+        {children}
       </body>
     </html>
   );

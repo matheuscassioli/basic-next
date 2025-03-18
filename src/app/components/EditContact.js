@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { ROUTE_EDIT_CONTACT } from '../routes/routesapi';
 import ContactsContext from '../contexts/ContactsContext';
 import { FiTrash } from "react-icons/fi";
+import { showToastDefault } from '../helper/helper';
 
 
 const DeleteButtonStyle = styled.button`
@@ -29,6 +30,7 @@ const EditContact = ({ id }) => {
         if (result) {
             const newArr = contactsFormatted.filter(obj => obj.id !== id)
             setContacts(newArr)
+            showToastDefault('error', 'teste', 5000)
         }
     }
 

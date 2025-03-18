@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import EditContact from '../../components/EditContact'
 import styled from 'styled-components'
 import ContactsContext from '../../contexts/ContactsContext'
+import ActionsTable from '../../components/ActionsTable/ActionsTable'
 
 const TableContainer = styled.div`
     font-size: 16px;
@@ -38,6 +39,9 @@ const TableContacts = () => {
 
     return (
         <TableContainer>
+
+            <ActionsTable />
+
             <TableStyled>
                 <thead>
                     <tr>
